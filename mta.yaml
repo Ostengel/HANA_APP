@@ -1,0 +1,15 @@
+ID: HANA_APP
+_schema-version: '2.0'
+version: 0.0.1
+modules:
+  - name: web
+    type: html5
+    path: web
+    requires:
+      - name: HANA_APP_UAA
+resources:
+  - name: HANA_APP_UAA
+    type: com.sap.xs.uaa
+    description: UAA Service
+    parameters:
+      config-path: .xs-security.json
